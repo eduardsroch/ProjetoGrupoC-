@@ -12,12 +12,29 @@ public class Pessoa
 public class Medico : Pessoa
 {
     public string CRM { get; set; }
+
+    public Medico(string nome, DateTime dataNascimento, string cpf, string crm)
+    {
+        Nome = nome;
+        DataNascimento = dataNascimento;
+        CPF = cpf;
+        CRM = crm;
+    }
 }
 
 public class Paciente : Pessoa
 {
     public string Sexo { get; set; }
     public List<string> Sintomas { get; set; }
+
+    public Paciente(string nome, DateTime dataNascimento, string cpf, string sexo)
+    {
+        Nome = nome;
+        DataNascimento = dataNascimento;
+        CPF = cpf;
+        Sexo = sexo;
+        Sintomas = new List<string>();
+    }
 }
 
 public class Exame
@@ -26,6 +43,14 @@ public class Exame
     public float Valor { get; set; }
     public string Descricao { get; set; }
     public string Local { get; set; }
+
+    public Exame(string titulo, float valor, string descricao, string local)
+    {
+        Titulo = titulo;
+        Valor = valor;
+        Descricao = descricao;
+        Local = local;
+    }
 }
 
 public class Atendimento
@@ -124,7 +149,7 @@ public class GerenciamentoAcademia
 
     public List<Pessoa> AniversariantesDoMes(int mes)
     {
-        return medicos.Where(m => m.DataNascimento.Month == mes).Cast<Pessoa>().Concat(pacientes.Where(p => p.DataNascimento.Month == mes))).ToList();
+        return medicos.Where(m => m.DataNascimento.Month == mes).Cast<Pessoa>().Concat(pacientes.Where(p => p.DataNascimento.Month == mes)).ToList();
     }
 
     public List<Atendimento> AtendimentosEmAberto()
@@ -252,7 +277,7 @@ public class Program
 
     private static void InserirMedico(GerenciamentoAcademia academia)
     {
-        Console.WriteLine("----- Inserir Médico -----");
+        Console.WriteLine("Inserir Médico");
         
         Console.Write("Digite o nome do médico: ");
         string nome = Console.ReadLine();
@@ -268,7 +293,7 @@ public class Program
 
     private static void RemoverMedico(GerenciamentoAcademia academia)
     {
-        Console.WriteLine("----- Remover Médico -----");
+        Console.WriteLine("Remover Médico");
         
         Console.Write("Digite o nome do médico a ser removido: ");
         string nome = Console.ReadLine();
@@ -288,7 +313,7 @@ public class Program
 
     private static void InserirPaciente(GerenciamentoAcademia academia)
     {
-        Console.WriteLine("----- Inserir Paciente -----");
+        Console.WriteLine("Inserir Paciente");
         
         Console.Write("Digite o nome do paciente: ");
         string nome = Console.ReadLine();
@@ -307,7 +332,7 @@ public class Program
 
     private static void RemoverPaciente(GerenciamentoAcademia academia)
     {
-        Console.WriteLine("----- Remover Paciente -----");
+        Console.WriteLine("Remover Paciente");
         
         Console.Write("Digite o nome do paciente a ser removido: ");
         string nome = Console.ReadLine();
@@ -327,7 +352,7 @@ public class Program
 
     private static void InserirExame(GerenciamentoAcademia academia)
     {
-        Console.WriteLine("----- Inserir Exame -----");
+        Console.WriteLine("Inserir Exame");
         
         Console.Write("Digite o nome do exame: ");
         string nome = Console.ReadLine();
@@ -340,7 +365,7 @@ public class Program
 
     private static void RemoverExame(GerenciamentoAcademia academia)
     {
-        Console.WriteLine("----- Remover Exame -----");
+        Console.WriteLine("Remover Exame");
         
         Console.Write("Digite o nome do exame a ser removido: ");
         string nome = Console.ReadLine();
@@ -360,7 +385,7 @@ public class Program
 
     private static void IniciarAtendimento(GerenciamentoAcademia academia)
     {
-        Console.WriteLine("----- Iniciar Atendimento -----");
+        Console.WriteLine("Iniciar Atendimento");
         
         Console.Write("Digite o nome do médico responsável: ");
         string nomeMedico = Console.ReadLine();
@@ -385,7 +410,7 @@ public class Program
 
     private static void FinalizarAtendimento(GerenciamentoAcademia academia)
     {
-        Console.WriteLine("----- Finalizar Atendimento -----");
+        Console.WriteLine("Finalizar Atendimento");
         
         Console.Write("Digite o nome do médico responsável: ");
         string nomeMedico = Console.ReadLine();
@@ -418,7 +443,7 @@ public class Program
 
     private static void ListarMedicosComIdadeEntre(GerenciamentoAcademia academia)
     {
-        Console.WriteLine("----- Listar Médicos com Idade entre -----");
+        Console.WriteLine("Listar Médicos com Idade entre");
         
         Console.Write("Digite a idade mínima: ");
         int idadeMinima = int.Parse(Console.ReadLine());
@@ -445,7 +470,7 @@ public class Program
 
     private static void ListarPacientesComIdadeEntre(GerenciamentoAcademia academia)
     {
-        Console.WriteLine("----- Listar Pacientes com Idade entre -----");
+        Console.WriteLine("Listar Pacientes com Idade entre");
         
         Console.Write("Digite a idade mínima: ");
         int idadeMinima = int.Parse(Console.ReadLine());
@@ -472,7 +497,7 @@ public class Program
 
     private static void ListarPacientesPorSexo(GerenciamentoAcademia academia)
     {
-        Console.WriteLine("----- Listar Pacientes por Sexo -----");
+        Console.WriteLine("Listar Pacientes por Sexo");
         
         Console.Write("Digite o sexo: ");
         string sexo = Console.ReadLine();
@@ -496,7 +521,7 @@ public class Program
 
     private static void ListarPacientesEmOrdemAlfabetica(GerenciamentoAcademia academia)
     {
-        Console.WriteLine("----- Listar Pacientes em Ordem Alfabética -----");
+        Console.WriteLine("Listar Pacientes em Ordem Alfabética");
         
         List<Paciente> pacientes = academia.PacientesEmOrdemAlfabetica();
         
@@ -517,7 +542,7 @@ public class Program
 
     private static void ListarPacientesComSintoma(GerenciamentoAcademia academia)
     {
-        Console.WriteLine("----- Listar Pacientes com Sintoma -----");
+        Console.WriteLine("Listar Pacientes com Sintoma");
         
         Console.Write("Digite o sintoma: ");
         string sintoma = Console.ReadLine();
@@ -541,7 +566,7 @@ public class Program
 
     private static void ListarAniversariantesDoMes(GerenciamentoAcademia academia)
     {
-        Console.WriteLine("----- Listar Aniversariantes do Mês -----");
+        Console.WriteLine("Listar Aniversariantes do Mês");
         
         Console.Write("Digite o número do mês: ");
         int mes = int.Parse(Console.ReadLine());
@@ -565,7 +590,7 @@ public class Program
 
     private static void ListarAtendimentosEmAberto(GerenciamentoAcademia academia)
     {
-        Console.WriteLine("----- Listar Atendimentos em Aberto -----");
+        Console.WriteLine("Listar Atendimentos em Aberto");
         
         List<Atendimento> atendimentos = academia.AtendimentosEmAberto();
         
@@ -586,7 +611,7 @@ public class Program
 
     private static void ListarMedicosPorQuantidadeAtendimentos(GerenciamentoAcademia academia)
     {
-        Console.WriteLine("----- Listar Médicos por Quantidade de Atendimentos -----");
+        Console.WriteLine("Listar Médicos por Quantidade de Atendimentos");
         
         List<Medico> medicos = academia.MedicosPorQuantidadeAtendimentos();
         
@@ -607,7 +632,7 @@ public class Program
 
     private static void ListarAtendimentosComPalavra(GerenciamentoAcademia academia)
     {
-        Console.WriteLine("----- Listar Atendimentos com Palavra -----");
+        Console.WriteLine("Listar Atendimentos com Palavra");
         
         Console.Write("Digite a palavra: ");
         string palavra = Console.ReadLine();
@@ -631,7 +656,7 @@ public class Program
 
     private static void ListarTop10ExamesUtilizados(GerenciamentoAcademia academia)
     {
-        Console.WriteLine("----- Listar Top 10 Exames Utilizados -----");
+        Console.WriteLine("Listar Top 10 Exames Utilizados");
         
         List<Exame> exames = academia.Top10ExamesUtilizados();
         
