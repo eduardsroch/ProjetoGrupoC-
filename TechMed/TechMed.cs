@@ -183,7 +183,7 @@ public class Program
         
         while (!sair)
         {
-            Console.WriteLine("----- Menu de Opções -----");
+            Console.WriteLine("Menu de Opções");
             Console.WriteLine("1. Inserir Médico");
             Console.WriteLine("2. Remover Médico");
             Console.WriteLine("3. Inserir Paciente");
