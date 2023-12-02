@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\edu__\\OneDrive\\Documentos\\Projeto em grupo\\Projeto em grupo.csproj": {}
+    "C:\\Users\\edu__\\OneDrive\\Documentos\\GitHub\\ProjetoGrupoC-\\TechMed\\Projeto em grupo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\edu__\\OneDrive\\Documentos\\Projeto em grupo\\Projeto em grupo.csproj": {
+    "C:\\Users\\edu__\\OneDrive\\Documentos\\GitHub\\ProjetoGrupoC-\\TechMed\\Projeto em grupo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\edu__\\OneDrive\\Documentos\\Projeto em grupo\\Projeto em grupo.csproj",
+        "projectUniqueName": "C:\\Users\\edu__\\OneDrive\\Documentos\\GitHub\\ProjetoGrupoC-\\TechMed\\Projeto em grupo.csproj",
         "projectName": "Projeto em grupo",
-        "projectPath": "C:\\Users\\edu__\\OneDrive\\Documentos\\Projeto em grupo\\Projeto em grupo.csproj",
+        "projectPath": "C:\\Users\\edu__\\OneDrive\\Documentos\\GitHub\\ProjetoGrupoC-\\TechMed\\Projeto em grupo.csproj",
         "packagesPath": "C:\\Users\\edu__\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\edu__\\OneDrive\\Documentos\\Projeto em grupo\\obj\\",
+        "outputPath": "C:\\Users\\edu__\\OneDrive\\Documentos\\GitHub\\ProjetoGrupoC-\\TechMed\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\edu__\\AppData\\Roaming\\NuGet\\NuGet.Config"
