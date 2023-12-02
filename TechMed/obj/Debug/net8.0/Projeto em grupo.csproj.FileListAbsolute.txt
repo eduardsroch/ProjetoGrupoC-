@@ -2,3 +2,8 @@ C:\Users\edu__\OneDrive\Documentos\Projeto em grupo\obj\Debug\net8.0\Projeto em 
 C:\Users\edu__\OneDrive\Documentos\Projeto em grupo\obj\Debug\net8.0\Projeto em grupo.AssemblyInfoInputs.cache
 C:\Users\edu__\OneDrive\Documentos\Projeto em grupo\obj\Debug\net8.0\Projeto em grupo.AssemblyInfo.cs
 C:\Users\edu__\OneDrive\Documentos\Projeto em grupo\obj\Debug\net8.0\Projeto em grupo.csproj.CoreCompileInputs.cache
+C:\Users\edu__\OneDrive\Documentos\GitHub\ProjetoGrupoC-\TechMed\obj\Debug\net8.0\Projeto em grupo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\edu__\OneDrive\Documentos\GitHub\ProjetoGrupoC-\TechMed\obj\Debug\net8.0\Projeto em grupo.AssemblyInfoInputs.cache
+C:\Users\edu__\OneDrive\Documentos\GitHub\ProjetoGrupoC-\TechMed\obj\Debug\net8.0\Projeto em grupo.AssemblyInfo.cs
+C:\Users\edu__\OneDrive\Documentos\GitHub\ProjetoGrupoC-\TechMed\obj\Debug\net8.0\Projeto em grupo.csproj.CoreCompileInputs.cache
+C:\Users\edu__\OneDrive\Documentos\GitHub\ProjetoGrupoC-\TechMed\obj\Debug\net8.0\Projeto em grupo.sourcelink.json
